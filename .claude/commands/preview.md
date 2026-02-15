@@ -1,0 +1,1 @@
+Build the site first (`source .venv/bin/activate && python3 build.py`), then start a local preview server on port 8765 by running `cd dist && python3 -m http.server 8765` in the background. Tell the user to open http://localhost:8765 in their browser.

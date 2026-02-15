@@ -1,0 +1,22 @@
+<article class="blog-post section">
+    <div class="container container-narrow">
+        <a href="{{url_blog_listing}}" class="back-link">&larr; {{t_back_to_blog}}</a>
+
+        <header class="post-header">
+            <time class="post-date" datetime="{{post_date}}">{{post_date}}</time>
+            <h1 class="post-title">{{post_title}}</h1>
+        </header>
+
+        <div class="post-hero">
+            <img src="{{post_image}}" alt="{{post_title}}" loading="lazy">
+        </div>
+
+        <div class="post-body prose">
+            {{post_body}}
+        </div>
+
+        <footer class="post-footer">
+            <a href="{{url_blog_listing}}" class="back-link">&larr; {{t_back_to_blog}}</a>
+        </footer>
+    </div>
+</article>

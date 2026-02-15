@@ -1,0 +1,47 @@
+[
+    {
+        "id": "brain-tan-pouch",
+        "name": {
+            "en": "Brain-Tanned Deer Hide Pouch",
+            "nl": "Hersengelooid Hertenleren Zakje",
+            "fr": "Pochette en peau de cerf tann\u00e9e au cerveau"
+        },
+        "description": {
+            "en": "A soft, supple pouch made from brain-tanned deer hide. Perfect for carrying fire-making tools, herbs, or small treasures. Each hide is processed by hand using only the animal's brain as a tanning agent — no chemicals, no shortcuts.",
+            "nl": "Een zacht, soepel zakje gemaakt van hersengelooid hertenleer. Perfect om vuurmaakgereedschap, kruiden of kleine schatten in te bewaren. Elke huid wordt met de hand bewerkt met alleen de hersenen van het dier als looistof — geen chemicali\u00ebn, geen shortcuts.",
+            "fr": "Une pochette souple en peau de cerf tann\u00e9e au cerveau. Parfaite pour transporter du mat\u00e9riel de feu, des herbes ou de petits tr\u00e9sors. Chaque peau est trait\u00e9e \u00e0 la main en utilisant uniquement le cerveau de l\u2019animal — sans produits chimiques."
+        },
+        "image": "/assets/images/products/placeholder.svg",
+        "price": "\u20ac 45"
+    },
+    {
+        "id": "bark-tan-belt",
+        "name": {
+            "en": "Oak Bark Tanned Belt",
+            "nl": "Eikenschorsgelooid Riem",
+            "fr": "Ceinture tann\u00e9e \u00e0 l\u2019\u00e9corce de ch\u00eane"
+        },
+        "description": {
+            "en": "A sturdy belt tanned over several months using oak bark. This traditional vegetable-tanning method produces a rich, warm brown leather that deepens with age. Hand-stitched with waxed linen thread.",
+            "nl": "Een stevige riem die gedurende meerdere maanden is gelooid met eikenschors. Deze traditionele plantaardige looitechniek produceert een rijk, warm bruin leer dat met de tijd donkerder wordt. Handgestikt met gewaxt linnen draad.",
+            "fr": "Une ceinture robuste tann\u00e9e pendant plusieurs mois avec de l\u2019\u00e9corce de ch\u00eane. Cette m\u00e9thode traditionnelle de tannage v\u00e9g\u00e9tal produit un cuir brun riche qui se patine avec le temps. Cousu main au fil de lin cir\u00e9."
+        },
+        "image": "/assets/images/products/placeholder.svg",
+        "price": "\u20ac 65"
+    },
+    {
+        "id": "bone-needle-set",
+        "name": {
+            "en": "Bone Needle Set",
+            "nl": "Benen Naalden Set",
+            "fr": "Jeu d\u2019aiguilles en os"
+        },
+        "description": {
+            "en": "A set of three hand-carved bone needles in different sizes, perfect for working with leather and sinew. Comes in a small leather roll. Each needle is shaped and polished from deer or cattle bone.",
+            "nl": "Een set van drie handgesneden benen naalden in verschillende maten, perfect voor het werken met leer en pezen. Wordt geleverd in een klein lederen etui. Elke naald is gevormd en gepolijst uit herten- of runderbot.",
+            "fr": "Un jeu de trois aiguilles en os sculpt\u00e9es \u00e0 la main de diff\u00e9rentes tailles, parfaites pour travailler le cuir et le tendon. Livr\u00e9 dans un petit \u00e9tui en cuir. Chaque aiguille est fa\u00e7onn\u00e9e et polie \u00e0 partir d\u2019os de cerf ou de b\u0153uf."
+        },
+        "image": "/assets/images/products/placeholder.svg",
+        "price": "\u20ac 25"
+    }
+]

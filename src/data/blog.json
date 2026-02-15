@@ -1,0 +1,17 @@
+[
+    {
+        "slug": "the-art-of-brain-tanning",
+        "date": "2026-01-15",
+        "title": {
+            "en": "The Art of Brain Tanning",
+            "nl": "De kunst van het hersenlooien",
+            "fr": "L\u2019art du tannage au cerveau"
+        },
+        "summary": {
+            "en": "Brain tanning is one of the oldest methods of turning raw hide into soft, workable leather. In this post I walk through the full process, from fleshing to smoking.",
+            "nl": "Hersenlooien is een van de oudste methoden om rauw leer om te zetten in zacht, bewerkbaar leder. In dit artikel loop ik het volledige proces door, van ontvlezen tot roken.",
+            "fr": "Le tannage au cerveau est l\u2019une des plus anciennes m\u00e9thodes pour transformer une peau brute en cuir souple et maniable. Dans cet article, je d\u00e9taille tout le processus, du d\u00e9charnage au fumage."
+        },
+        "image": "/assets/images/blog/placeholder.svg"
+    }
+]

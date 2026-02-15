@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}} — {{site_name}}</title>
+    <meta name="description" content="{{page_description}}">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    {{header}}
+
+    <main>
+        {{content}}
+    </main>
+
+    {{footer}}
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img class="lightbox-img" src="" alt="">
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

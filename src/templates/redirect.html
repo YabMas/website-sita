@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=/en/">
+    <title>Redirecting…</title>
+    <script>
+        (function () {
+            var lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+            var supported = { en: '/en/', nl: '/nl/', fr: '/fr/' };
+            window.location.replace(supported[lang] || '/en/');
+        })();
+    </script>
+</head>
+<body>
+    <p>Redirecting… <a href="/en/">Click here</a> if not redirected.</p>
+</body>
+</html>
