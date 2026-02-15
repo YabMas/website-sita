@@ -1,0 +1,1 @@
+Deploy the site to GitHub Pages. Run `./deploy.sh` from the project root. This builds the site and force-pushes the contents of `dist/` to the `gh-pages` branch so that `index.html` is at the repo root. Report the output and confirm success. Remind the user to configure GitHub Pages to serve from the `gh-pages` branch (root) if they haven't already.

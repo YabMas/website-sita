@@ -35,6 +35,16 @@ dist/               Build output — upload this to hosting
 - `src/assets/css/main.css` — all styles (earthy palette, responsive)
 - `src/assets/js/main.js` — mobile nav toggle + image lightbox
 
+## Deployment
+
+Hosted on GitHub Pages from the `gh-pages` branch. The `deploy.sh` script builds the site and force-pushes the contents of `dist/` (not the source) to `gh-pages`, so `index.html` sits at the repo root.
+
+```
+./deploy.sh
+```
+
+The `main` branch has the source code. The `gh-pages` branch is a standalone deploy artifact — never edit it directly.
+
 ## Common workflows
 
 **Build the site:**
@@ -45,6 +55,11 @@ source .venv/bin/activate && python3 build.py
 **Preview locally:**
 ```
 cd dist && python3 -m http.server 8765
+```
+
+**Deploy:**
+```
+./deploy.sh
 ```
 
 **Add a product:** Add an entry to `src/data/products.json`, add image to `src/assets/images/products/`, rebuild.
