@@ -2,17 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/en/">
+    <meta http-equiv="refresh" content="0; url={{base_url}}/en/">
     <title>Redirecting…</title>
     <script>
         (function () {
+            var base = '{{base_url}}';
             var lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
-            var supported = { en: '/en/', nl: '/nl/', fr: '/fr/' };
-            window.location.replace(supported[lang] || '/en/');
+            var supported = { en: base + '/en/', nl: base + '/nl/', fr: base + '/fr/' };
+            window.location.replace(supported[lang] || base + '/en/');
         })();
     </script>
 </head>
 <body>
-    <p>Redirecting… <a href="/en/">Click here</a> if not redirected.</p>
+    <p>Redirecting… <a href="{{base_url}}/en/">Click here</a> if not redirected.</p>
 </body>
 </html>

@@ -32,6 +32,10 @@ ASSETS_DIR = os.path.join(SRC, "assets")
 LANGUAGES = ["en", "nl", "fr"]
 DEFAULT_LANG = "en"
 
+# Base URL path for deployment (e.g. "/website-sita" for GitHub Pages project sites).
+# Set via --base-url flag or SITE_BASE_URL env var.  Empty string for root hosting.
+BASE_URL = ""
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -114,14 +118,14 @@ SLUG_MAP = {
 def page_url(page, lang):
     """Return the relative URL for a given page in the given language."""
     if page == "home":
-        return f"/{lang}/"
+        return f"{BASE_URL}/{lang}/"
     slug = SLUG_MAP.get(page, {}).get(lang, page)
-    return f"/{lang}/{slug}/"
+    return f"{BASE_URL}/{lang}/{slug}/"
 
 
 def blog_post_url(post_slug, lang):
     blog_slug = SLUG_MAP["blog"][lang]
-    return f"/{lang}/{blog_slug}/{post_slug}/"
+    return f"{BASE_URL}/{lang}/{blog_slug}/{post_slug}/"
 
 
 # ---------------------------------------------------------------------------
@@ -136,6 +140,7 @@ def build_context(lang, data, page="home", extra=None):
     ctx = {}
     # Site-level
     ctx["lang"] = lang
+    ctx["base_url"] = BASE_URL
     ctx["site_name"] = site["name"]
     ctx["site_tagline"] = site["taglines"].get(lang, site["taglines"][DEFAULT_LANG])
     ctx["contact_email"] = site["contact_email"]
@@ -201,7 +206,7 @@ def assemble_page(body_html, lang, data, page="home", extra=None):
 def build_root_redirect():
     """Build the root index.html that detects language and redirects."""
     tpl = load_template("redirect.html")
-    write_page("index.html", tpl)
+    write_page("index.html", render(tpl, {"base_url": BASE_URL}))
 
 
 def build_home(lang, data):
@@ -221,7 +226,7 @@ def build_products(lang, data):
         p_ctx = {
             "product_name": product["name"].get(lang, product["name"][DEFAULT_LANG]),
             "product_description": product["description"].get(lang, product["description"][DEFAULT_LANG]),
-            "product_image": product.get("image", "/assets/images/products/placeholder.svg"),
+            "product_image": BASE_URL + product.get("image", "/assets/images/products/placeholder.svg"),
             "product_price": product.get("price", ""),
         }
         cards_html += render(card_tpl, p_ctx)
@@ -248,7 +253,7 @@ def build_blog_listing(lang, data):
             "post_title": post["title"].get(lang, post["title"][DEFAULT_LANG]),
             "post_summary": post["summary"].get(lang, post["summary"][DEFAULT_LANG]),
             "post_date": post["date"],
-            "post_image": post.get("image", "/assets/images/blog/placeholder.svg"),
+            "post_image": BASE_URL + post.get("image", "/assets/images/blog/placeholder.svg"),
             "post_url": blog_post_url(post["slug"], lang),
         })
         cards_html += render(card_tpl, p_ctx)
@@ -286,7 +291,7 @@ def build_blog_posts(lang, data):
             "post_title": post_title,
             "page_title": post_title,
             "post_date": post["date"],
-            "post_image": post.get("image", "/assets/images/blog/placeholder.svg"),
+            "post_image": BASE_URL + post.get("image", "/assets/images/blog/placeholder.svg"),
             "post_body": body_html,
             "url_blog_listing": page_url("blog", lang),
         }
@@ -301,7 +306,15 @@ def build_blog_posts(lang, data):
 # ---------------------------------------------------------------------------
 
 def main():
-    print("Building site...")
+    global BASE_URL
+    # --base-url /my-repo  or  env SITE_BASE_URL=/my-repo
+    for i, arg in enumerate(sys.argv[1:], 1):
+        if arg == "--base-url" and i < len(sys.argv) - 1:
+            BASE_URL = sys.argv[i + 1].rstrip("/")
+    if not BASE_URL:
+        BASE_URL = os.environ.get("SITE_BASE_URL", "").rstrip("/")
+
+    print(f"Building site...  (base_url={BASE_URL!r})")
     clean()
     os.makedirs(DIST, exist_ok=True)
 
