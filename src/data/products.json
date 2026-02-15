@@ -1,47 +1,47 @@
 [
     {
-        "id": "brain-tan-pouch",
+        "id": "bark-tanned-sheepskin",
         "name": {
-            "en": "Brain-Tanned Deer Hide Pouch",
-            "nl": "Hersengelooid Hertenleren Zakje",
-            "fr": "Pochette en peau de cerf tann\u00e9e au cerveau"
+            "en": "Bark-Tanned Sheepskin",
+            "nl": "Schorsgelooid Schapenvacht",
+            "fr": "Peau de mouton tann\u00e9e \u00e0 l\u2019\u00e9corce"
         },
         "description": {
-            "en": "A soft, supple pouch made from brain-tanned deer hide. Perfect for carrying fire-making tools, herbs, or small treasures. Each hide is processed by hand using only the animal's brain as a tanning agent — no chemicals, no shortcuts.",
-            "nl": "Een zacht, soepel zakje gemaakt van hersengelooid hertenleer. Perfect om vuurmaakgereedschap, kruiden of kleine schatten in te bewaren. Elke huid wordt met de hand bewerkt met alleen de hersenen van het dier als looistof — geen chemicali\u00ebn, geen shortcuts.",
-            "fr": "Une pochette souple en peau de cerf tann\u00e9e au cerveau. Parfaite pour transporter du mat\u00e9riel de feu, des herbes ou de petits tr\u00e9sors. Chaque peau est trait\u00e9e \u00e0 la main en utilisant uniquement le cerveau de l\u2019animal — sans produits chimiques."
+            "en": "A whole sheepskin, slowly tanned over months using only bark. Soft, warm, and full of character \u2014 each hide tells its own story. Perfect as a throw, seat cover, or simply to keep close.",
+            "nl": "Een hele schapenvacht, maandenlang langzaam gelooid met alleen schors. Zacht, warm en vol karakter \u2014 elke huid vertelt zijn eigen verhaal. Perfect als plaid, stoelbekleding of gewoon om dichtbij te houden.",
+            "fr": "Une peau de mouton enti\u00e8re, tann\u00e9e lentement pendant des mois avec de l\u2019\u00e9corce uniquement. Douce, chaude et pleine de caract\u00e8re \u2014 chaque peau raconte sa propre histoire. Parfaite comme jet\u00e9, housse de si\u00e8ge ou simplement \u00e0 garder pr\u00e8s de soi."
+        },
+        "image": "/assets/images/products/placeholder.svg",
+        "price": "\u20ac 85"
+    },
+    {
+        "id": "sheepskin-cushion-cover",
+        "name": {
+            "en": "Sheepskin Cushion Cover",
+            "nl": "Schapenvacht Kussenhoes",
+            "fr": "Housse de coussin en peau de mouton"
+        },
+        "description": {
+            "en": "A cushion cover crafted from bark-tanned sheepskin, soft to the touch and warm in every season. Stitched with care. A small piece of ancient warmth for your home.",
+            "nl": "Een kussenhoes gemaakt van schorsgelooid schapenvacht, zacht om aan te raken en warm in elk seizoen. Met zorg gestikt. Een klein stukje oude warmte voor je huis.",
+            "fr": "Une housse de coussin en peau de mouton tann\u00e9e \u00e0 l\u2019\u00e9corce, douce au toucher et chaude en toute saison. Cousue avec soin. Un petit morceau de chaleur ancienne pour votre int\u00e9rieur."
         },
         "image": "/assets/images/products/placeholder.svg",
         "price": "\u20ac 45"
     },
     {
-        "id": "bark-tan-belt",
+        "id": "sheepskin-pouch",
         "name": {
-            "en": "Oak Bark Tanned Belt",
-            "nl": "Eikenschorsgelooid Riem",
-            "fr": "Ceinture tann\u00e9e \u00e0 l\u2019\u00e9corce de ch\u00eane"
+            "en": "Sheepskin Pouch",
+            "nl": "Schapenvacht Zakje",
+            "fr": "Pochette en peau de mouton"
         },
         "description": {
-            "en": "A sturdy belt tanned over several months using oak bark. This traditional vegetable-tanning method produces a rich, warm brown leather that deepens with age. Hand-stitched with waxed linen thread.",
-            "nl": "Een stevige riem die gedurende meerdere maanden is gelooid met eikenschors. Deze traditionele plantaardige looitechniek produceert een rijk, warm bruin leer dat met de tijd donkerder wordt. Handgestikt met gewaxt linnen draad.",
-            "fr": "Une ceinture robuste tann\u00e9e pendant plusieurs mois avec de l\u2019\u00e9corce de ch\u00eane. Cette m\u00e9thode traditionnelle de tannage v\u00e9g\u00e9tal produit un cuir brun riche qui se patine avec le temps. Cousu main au fil de lin cir\u00e9."
+            "en": "A soft pouch made from bark-tanned sheepskin. For carrying small treasures, herbs, or everyday essentials. Each one is unique, shaped by the hide it came from.",
+            "nl": "Een zacht zakje gemaakt van schorsgelooid schapenvacht. Voor het bewaren van kleine schatten, kruiden of dagelijkse benodigdheden. Elk exemplaar is uniek, gevormd door de huid waarvan het gemaakt is.",
+            "fr": "Une pochette souple en peau de mouton tann\u00e9e \u00e0 l\u2019\u00e9corce. Pour transporter de petits tr\u00e9sors, des herbes ou des essentiels du quotidien. Chacune est unique, fa\u00e7onn\u00e9e par la peau dont elle provient."
         },
         "image": "/assets/images/products/placeholder.svg",
-        "price": "\u20ac 65"
-    },
-    {
-        "id": "bone-needle-set",
-        "name": {
-            "en": "Bone Needle Set",
-            "nl": "Benen Naalden Set",
-            "fr": "Jeu d\u2019aiguilles en os"
-        },
-        "description": {
-            "en": "A set of three hand-carved bone needles in different sizes, perfect for working with leather and sinew. Comes in a small leather roll. Each needle is shaped and polished from deer or cattle bone.",
-            "nl": "Een set van drie handgesneden benen naalden in verschillende maten, perfect voor het werken met leer en pezen. Wordt geleverd in een klein lederen etui. Elke naald is gevormd en gepolijst uit herten- of runderbot.",
-            "fr": "Un jeu de trois aiguilles en os sculpt\u00e9es \u00e0 la main de diff\u00e9rentes tailles, parfaites pour travailler le cuir et le tendon. Livr\u00e9 dans un petit \u00e9tui en cuir. Chaque aiguille est fa\u00e7onn\u00e9e et polie \u00e0 partir d\u2019os de cerf ou de b\u0153uf."
-        },
-        "image": "/assets/images/products/placeholder.svg",
-        "price": "\u20ac 25"
+        "price": "\u20ac 30"
     }
 ]

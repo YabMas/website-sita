@@ -1,4 +1,4 @@
-# Sita — Natural Tanning & Primitive Skills Website
+# L'artisane sauvage — Natural Tanning & Primitive Skills Website
 
 ## Project overview
 
