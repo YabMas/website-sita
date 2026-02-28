@@ -6,14 +6,20 @@ set -euo pipefail
 
 BRANCH="gh-pages"
 DIST="dist"
+CNAME="artisanesauvagecreations.com"
 
-# Derive the base URL from the GitHub repo name (e.g. "/website-sita")
 REMOTE_URL=$(git remote get-url origin)
 REPO_NAME=$(basename -s .git "$REMOTE_URL")
-BASE_URL="/${REPO_NAME}"
 
-# 1. Build with the correct base URL for GitHub Pages
-echo "Building site with base_url=${BASE_URL}..."
+# Custom domain → base URL is empty (root). Without one, use /repo-name.
+if [ -n "$CNAME" ]; then
+    BASE_URL=""
+else
+    BASE_URL="/${REPO_NAME}"
+fi
+
+# 1. Build with the correct base URL
+echo "Building site with base_url=${BASE_URL:-/}..."
 source .venv/bin/activate
 python3 build.py --base-url "$BASE_URL"
 
@@ -30,16 +36,25 @@ trap 'rm -rf "$TMPDIR"' EXIT
 # 4. Copy dist contents into the temp dir
 cp -a "$DIST"/. "$TMPDIR"/
 
-# 5. Build a git commit from the temp dir
+# 5. Add CNAME file for custom domain
+if [ -n "$CNAME" ]; then
+    echo "$CNAME" > "$TMPDIR/CNAME"
+fi
+
+# 6. Build a git commit from the temp dir
 cd "$TMPDIR"
 git init --quiet
 git checkout --quiet -b "$BRANCH"
 git add -A
 git commit --quiet -m "Deploy $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
 
-# 6. Force-push to the remote gh-pages branch
+# 7. Force-push to the remote gh-pages branch
 git push --force "$REMOTE_URL" "$BRANCH"
 
 echo ""
 echo "Deployed to branch '$BRANCH'."
-echo "Site will be at: https://$(echo "$REMOTE_URL" | sed -E 's|.*[:/]([^/]+)/.*|\L\1|').github.io${BASE_URL}/"
+if [ -n "$CNAME" ]; then
+    echo "Site will be at: https://${CNAME}/"
+else
+    echo "Site will be at: https://$(echo "$REMOTE_URL" | sed -E 's|.*[:/]([^/]+)/.*|\L\1|').github.io${BASE_URL}/"
+fi
