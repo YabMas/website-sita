@@ -876,6 +876,24 @@ a {
         --fs-3xl: 2.5rem;
     }
 
+    /* Compact header: show only the logo (the name lives inside the seal).
+       Keep the wordmark for screen readers, just hidden visually. */
+    .logo-text {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .site-logo-mark {
+        width: 52px;
+        height: 52px;
+    }
+
     .nav-toggle {
         display: flex;
     }
