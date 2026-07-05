@@ -138,16 +138,22 @@ a {
 
 .site-logo-mark {
     display: block;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
 }
 
+/* Brand wordmark: kept in the DOM for screen readers (the home link's
+   accessible name) but hidden visually everywhere — the seal carries the name. */
 .logo-text {
-    font-family: var(--font-heading);
-    font-size: var(--fs-lg);
-    font-weight: 700;
-    color: var(--color-bark);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 /* Nav toggle (mobile) */
@@ -860,19 +866,6 @@ a {
     :root {
         --fs-2xl: 2rem;
         --fs-3xl: 2.5rem;
-    }
-
-    /* Compact header: show only the logo (the name lives inside the seal).
-       Keep the wordmark for screen readers, just hidden visually. */
-    .logo-text {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
     }
 
     .site-logo-mark {
