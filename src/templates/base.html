@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{page_title}} — {{site_name}}</title>
     <meta name="description" content="{{page_description}}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{base_url}}/assets/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="{{base_url}}/assets/favicon.png">
+    <link rel="apple-touch-icon" href="{{base_url}}/assets/favicon.png">
     <link rel="stylesheet" href="{{base_url}}/assets/css/reset.css">
     <link rel="stylesheet" href="{{base_url}}/assets/css/main.css">
 </head>
@@ -22,7 +22,10 @@
 
     <div id="lightbox" class="lightbox" aria-hidden="true">
         <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous image" hidden>&lsaquo;</button>
         <img class="lightbox-img" src="" alt="">
+        <button class="lightbox-nav lightbox-next" aria-label="Next image" hidden>&rsaquo;</button>
+        <span class="lightbox-count" hidden></span>
     </div>
 
     <script src="{{base_url}}/assets/js/main.js"></script>

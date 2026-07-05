@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producten — Sita</title>
-    <meta name="description" content="Natuurlijk looien & primitieve vaardigheden">
+    <title>Handgemaakt — L'artisane sauvage</title>
+    <meta name="description" content="Wild ambacht, oude herinnering">
+    <link rel="icon" href="/assets/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/favicon.png">
     <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
@@ -12,9 +15,13 @@
     <header class="site-header">
     <div class="container header-inner">
         <a href="/nl/" class="site-logo">
-            <span class="logo-text">Sita</span>
+            <img src="/assets/images/logo.png" alt="" class="site-logo-mark" width="44" height="44">
+            <span class="logo-text">L'artisane sauvage</span>
         </a>
 
+        <!-- Page navigation temporarily disabled: only Home + Products for now,
+             and Home is reached via the brand name above. To re-enable, uncomment
+             the nav-toggle button and the .nav-list inside .site-nav below.
         <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
@@ -23,17 +30,17 @@
 
         <nav class="site-nav" aria-label="Hoofdnavigatie">
             <ul class="nav-list">
-                <li><a href="/nl/" class="nav-link ">Home</a></li>
+                <li><a href="/nl/" class="nav-link ">Welkom</a></li>
                 <li><a href="/nl/producten/" class="nav-link active">Producten</a></li>
-                <li><a href="/nl/blog/" class="nav-link ">Dagboek</a></li>
-            </ul>
-
-            <ul class="lang-switcher" aria-label="Taal">
-                <li><a href="/en/products/" class="lang-link" lang="en">EN</a></li>
-                <li><a href="/nl/producten/" class="lang-link" lang="nl">NL</a></li>
-                <li><a href="/fr/produits/" class="lang-link" lang="fr">FR</a></li>
             </ul>
         </nav>
+        -->
+
+        <ul class="lang-switcher" aria-label="Taal">
+            <li><a href="/nl/producten/" class="lang-link active" lang="nl">NL</a></li>
+            <li><a href="/fr/produits/" class="lang-link " lang="fr">FR</a></li>
+            <li><a href="/en/products/" class="lang-link " lang="en">EN</a></li>
+        </ul>
     </div>
 </header>
 
@@ -41,42 +48,51 @@
     <main>
         <section class="page-header section">
     <div class="container">
-        <h1 class="section-heading">Producten</h1>
-        <p class="page-intro">Elk stuk is met de hand gemaakt volgens traditionele methoden. Natuurlijke materialen, geen shortcuts.</p>
+        <h1 class="section-heading">Handgemaakt</h1>
+        <p class="page-intro">Elk stuk wordt langzaam gelooid met schors en zorg. Gemaakt om met dankbaarheid te dragen en te gebruiken, voor het dier en het land.</p>
     </div>
 </section>
 
-<section class="products-grid section">
+<section class="products section">
     <div class="container">
-        <div class="card-grid">
-            <article class="card product-card">
-    <div class="card-image">
-        <img src="/assets/images/products/placeholder.svg" alt="Hersengelooid Hertenleren Zakje" loading="lazy">
+        <div class="product-list">
+            <article class="product-feature">
+    <div class="product-feature-media">
+        <div class="carousel" data-carousel><div class="carousel-viewport"><ul class="carousel-track"><li class="carousel-slide"><img src="/assets/images/products/huid_1.jpg" alt="Schapenhuiden" loading="eager"></li><li class="carousel-slide"><img src="/assets/images/products/huid_2.jpg" alt="Schapenhuiden" loading="lazy"></li><li class="carousel-slide"><img src="/assets/images/products/huid_3.jpg" alt="Schapenhuiden" loading="lazy"></li><li class="carousel-slide"><img src="/assets/images/products/huid_4.jpg" alt="Schapenhuiden" loading="lazy"></li></ul></div><button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Previous image"><span aria-hidden="true">‹</span></button><button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Next image"><span aria-hidden="true">›</span></button><div class="carousel-dots"><button class="carousel-dot is-active" type="button" aria-label="Go to image 1"></button><button class="carousel-dot" type="button" aria-label="Go to image 2"></button><button class="carousel-dot" type="button" aria-label="Go to image 3"></button><button class="carousel-dot" type="button" aria-label="Go to image 4"></button></div></div>
     </div>
-    <div class="card-body">
-        <h2 class="card-title">Hersengelooid Hertenleren Zakje</h2>
-        <p class="card-text">Een zacht, soepel zakje gemaakt van hersengelooid hertenleer. Perfect om vuurmaakgereedschap, kruiden of kleine schatten in te bewaren. Elke huid wordt met de hand bewerkt met alleen de hersenen van het dier als looistof — geen chemicaliën, geen shortcuts.</p>
-        <p class="product-price">€ 45</p>
-    </div>
-</article>
-<article class="card product-card">
-    <div class="card-image">
-        <img src="/assets/images/products/placeholder.svg" alt="Eikenschorsgelooid Riem" loading="lazy">
-    </div>
-    <div class="card-body">
-        <h2 class="card-title">Eikenschorsgelooid Riem</h2>
-        <p class="card-text">Een stevige riem die gedurende meerdere maanden is gelooid met eikenschors. Deze traditionele plantaardige looitechniek produceert een rijk, warm bruin leer dat met de tijd donkerder wordt. Handgestikt met gewaxt linnen draad.</p>
-        <p class="product-price">€ 65</p>
+    <div class="product-feature-body">
+        <h2 class="product-feature-title">Schapenhuiden</h2>
+        <p class="product-feature-tagline">Bewaard voor een nieuw hoofdstuk</p>
+        <div class="product-feature-text"><p>Elke huid is uniek. Niet alleen in kleur, vorm of vacht, maar ook in het verhaal dat zij met zich meedraagt. Dat verhaal zie je terug in de kleine sporen die het leven heeft achtergelaten. Met de hand gelooid, met tijd, aandacht en wat de natuur ons biedt — een huid om op te leven, mee te werken of eenvoudig te bewonderen.</p><p>Heb je interesse in een van mijn handgelooide huiden? Stuur me gerust een bericht. Samen kijken we naar de huiden die op dat moment beschikbaar zijn; het aanbod verandert voortdurend.</p><p>Ik kies ervoor de vacht niet meer te borstelen dan nodig, zodat haar natuurlijke karakter behouden blijft. De huid laat ik zoveel mogelijk in haar natuurlijke vorm, zodat haar oorsprong zichtbaar blijft. Soms draagt de vacht nog een klein spoor van de natuur met zich mee: een grassprietje, een zaadje of iets anders dat herinnert aan een leven buiten.</p><p>Hoe de vacht zich daarna ontwikkelt, laat ik graag aan jou over. Je kunt haar thuis verder borstelen naar de uitstraling die je aanspreekt. Geef je de voorkeur aan een klassieke schapenvachtvorm? Dan snijd ik de huid op aanvraag graag voor je bij.</p></div>
+        
+        <p class="product-price">Gemiddelde prijs: € 150</p><p class="product-price-note">De prijs varieert afhankelijk van de grootte, wolkwaliteit en het karakter van de huid.</p>
+        <a href="mailto:lartisanesauvage@gmail.com?subject=Schapenhuiden%20%E2%80%94%20L%27artisane%20sauvage" class="btn btn-primary product-contact-btn">Neem contact op</a>
     </div>
 </article>
-<article class="card product-card">
-    <div class="card-image">
-        <img src="/assets/images/products/placeholder.svg" alt="Benen Naalden Set" loading="lazy">
+<article class="product-feature">
+    <div class="product-feature-media">
+        <div class="carousel" data-carousel><div class="carousel-viewport"><ul class="carousel-track"><li class="carousel-slide"><img src="/assets/images/products/zit_kussen_1.jpg" alt="Stoelhuiden" loading="eager"></li><li class="carousel-slide"><img src="/assets/images/products/zit_kussen_3.jpg" alt="Stoelhuiden" loading="lazy"></li><li class="carousel-slide"><img src="/assets/images/products/zit_kussen_4.jpg" alt="Stoelhuiden" loading="lazy"></li><li class="carousel-slide"><img src="/assets/images/products/zit_kussen_2.jpg" alt="Stoelhuiden" loading="lazy"></li></ul></div><button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Previous image"><span aria-hidden="true">‹</span></button><button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Next image"><span aria-hidden="true">›</span></button><div class="carousel-dots"><button class="carousel-dot is-active" type="button" aria-label="Go to image 1"></button><button class="carousel-dot" type="button" aria-label="Go to image 2"></button><button class="carousel-dot" type="button" aria-label="Go to image 3"></button><button class="carousel-dot" type="button" aria-label="Go to image 4"></button></div></div>
     </div>
-    <div class="card-body">
-        <h2 class="card-title">Benen Naalden Set</h2>
-        <p class="card-text">Een set van drie handgesneden benen naalden in verschillende maten, perfect voor het werken met leer en pezen. Wordt geleverd in een klein lederen etui. Elke naald is gevormd en gepolijst uit herten- of runderbot.</p>
-        <p class="product-price">€ 25</p>
+    <div class="product-feature-body">
+        <h2 class="product-feature-title">Stoelhuiden</h2>
+        <p class="product-feature-tagline">Een stuk natuur dat dagelijks met je meeleeft</p>
+        <div class="product-feature-text"><p>Voor aan de keukentafel, achter je bureau of op je favoriete stoel. Een stoelhuid brengt warmte, zachtheid en karakter op de plekken waar je iedere dag weer terugkomt.</p><p>Met de hand gelooid, met tijd, aandacht en wat de natuur ons biedt. De wol vormt zich naar je lichaam en ondersteunt je tijdens de lange én de korte momenten van de dag.</p></div>
+        <div class="product-sizes"><h3 class="product-sizes-heading">Maat</h3><ul class="product-sizes-list"><li>Standaardmaat — Ø 39 cm</li></ul><p class="product-sizes-note">Op zoek naar een andere maat? Iedere stoel is anders. Heb je een andere diameter of vorm nodig? Neem gerust contact met me op, dan kijken we samen naar de mogelijkheden.</p></div>
+        <p class="product-price">€ 50 per stuk</p>
+        <a href="mailto:lartisanesauvage@gmail.com?subject=Stoelhuiden%20%E2%80%94%20L%27artisane%20sauvage" class="btn btn-primary product-contact-btn">Neem contact op</a>
+    </div>
+</article>
+<article class="product-feature">
+    <div class="product-feature-media">
+        <div class="carousel" data-carousel><div class="carousel-viewport"><ul class="carousel-track"><li class="carousel-slide"><img src="/assets/images/products/slofjes_1.jpg" alt="Babyslofjes" loading="eager"></li><li class="carousel-slide"><img src="/assets/images/products/slofjes_2.jpg" alt="Babyslofjes" loading="lazy"></li><li class="carousel-slide"><img src="/assets/images/products/slofjes_3.jpg" alt="Babyslofjes" loading="lazy"></li><li class="carousel-slide"><img src="/assets/images/products/slofjes_4.jpg" alt="Babyslofjes" loading="lazy"></li><li class="carousel-slide"><img src="/assets/images/products/slofjes_5.jpg" alt="Babyslofjes" loading="lazy"></li></ul></div><button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Previous image"><span aria-hidden="true">‹</span></button><button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Next image"><span aria-hidden="true">›</span></button><div class="carousel-dots"><button class="carousel-dot is-active" type="button" aria-label="Go to image 1"></button><button class="carousel-dot" type="button" aria-label="Go to image 2"></button><button class="carousel-dot" type="button" aria-label="Go to image 3"></button><button class="carousel-dot" type="button" aria-label="Go to image 4"></button><button class="carousel-dot" type="button" aria-label="Go to image 5"></button></div></div>
+    </div>
+    <div class="product-feature-body">
+        <h2 class="product-feature-title">Babyslofjes</h2>
+        <p class="product-feature-tagline">Warmte, zoals we die al generaties lang doorgeven</p>
+        <div class="product-feature-text"><p>Voor de allerkleinsten, met de hand genaaid van natuurlijk gelooide schapenvacht. Zacht, ademend en soepel, zodat kleine voetjes vrij kunnen bewegen en warm blijven.</p><p>Een paar slofjes die iets in ons zachtjes doen herinneren.</p></div>
+        <div class="product-sizes"><h3 class="product-sizes-heading">Maten</h3><ul class="product-sizes-list"><li>2–6 maanden</li><li>6–12 maanden</li><li>12–18 maanden</li><li>18–24 maanden</li><li>2–3 jaar</li><li>3–4 jaar</li></ul><p class="product-sizes-note">De slofjes vallen iets kleiner uit door de zachte wol aan de binnenkant. Twijfel je tussen twee maten? Neem gerust contact met me op, dan denk ik graag met je mee.</p></div>
+        <p class="product-price">€ 50 per paar</p>
+        <a href="mailto:lartisanesauvage@gmail.com?subject=Babyslofjes%20%E2%80%94%20L%27artisane%20sauvage" class="btn btn-primary product-contact-btn">Neem contact op</a>
     </div>
 </article>
 
@@ -88,32 +104,18 @@
 
     <footer class="site-footer">
     <div class="container footer-inner">
-        <div class="footer-brand">
-            <span class="logo-text">Sita</span>
-            <p class="footer-tagline">Natuurlijk looien & primitieve vaardigheden</p>
-        </div>
-
-        <nav class="footer-nav" aria-label="Voettekstnavigatie">
-            <ul>
-                <li><a href="/nl/">Home</a></li>
-                <li><a href="/nl/producten/">Producten</a></li>
-                <li><a href="/nl/blog/">Dagboek</a></li>
-            </ul>
-        </nav>
-
-        <div class="footer-contact">
-            <p>Neem contact op</p>
-            <a href="mailto:hello@sita-craft.com">hello@sita-craft.com</a>
-        </div>
-
-        <p class="footer-copy">&copy; 2026 Sita</p>
+        <p class="footer-copy">&copy; 2026 L'artisane sauvage</p>
+        <p class="footer-contact">Neem contact op: <a href="mailto:lartisanesauvage@gmail.com">lartisanesauvage@gmail.com</a></p>
     </div>
 </footer>
 
 
     <div id="lightbox" class="lightbox" aria-hidden="true">
         <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous image" hidden>&lsaquo;</button>
         <img class="lightbox-img" src="" alt="">
+        <button class="lightbox-nav lightbox-next" aria-label="Next image" hidden>&rsaquo;</button>
+        <span class="lightbox-count" hidden></span>
     </div>
 
     <script src="/assets/js/main.js"></script>

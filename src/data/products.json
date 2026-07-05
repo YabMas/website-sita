@@ -1,47 +1,158 @@
 [
     {
-        "id": "bark-tanned-sheepskin",
+        "id": "bark-tanned-hide",
         "name": {
-            "en": "Bark-Tanned Sheepskin",
-            "nl": "Schorsgelooid Schapenvacht",
-            "fr": "Peau de mouton tann\u00e9e \u00e0 l\u2019\u00e9corce"
+            "en": "Sheepskins",
+            "nl": "Schapenhuiden",
+            "fr": "Peaux de mouton"
+        },
+        "tagline": {
+            "en": "Preserved for a new chapter",
+            "nl": "Bewaard voor een nieuw hoofdstuk",
+            "fr": "Conservées pour un nouveau chapitre"
         },
         "description": {
-            "en": "A whole sheepskin, slowly tanned over months using only bark. Soft, warm, and full of character \u2014 each hide tells its own story. Perfect as a throw, seat cover, or simply to keep close.",
-            "nl": "Een hele schapenvacht, maandenlang langzaam gelooid met alleen schors. Zacht, warm en vol karakter \u2014 elke huid vertelt zijn eigen verhaal. Perfect als plaid, stoelbekleding of gewoon om dichtbij te houden.",
-            "fr": "Une peau de mouton enti\u00e8re, tann\u00e9e lentement pendant des mois avec de l\u2019\u00e9corce uniquement. Douce, chaude et pleine de caract\u00e8re \u2014 chaque peau raconte sa propre histoire. Parfaite comme jet\u00e9, housse de si\u00e8ge ou simplement \u00e0 garder pr\u00e8s de soi."
+            "en": [
+                "Every hide is unique — not only in colour, shape, or fleece, but in the story it carries. You can read that story in the small marks life has left behind. Tanned by hand, with time, attention, and what nature provides — a hide to live on, to work with, or simply to admire.",
+                "Interested in one of my hand-tanned hides? Send me a message and we'll look together at what's available at the moment; the selection changes all the time.",
+                "I choose to brush the fleece no more than necessary, so its natural character is preserved. I also leave the hide as close to its natural shape as possible, so its origin stays visible. Sometimes the fleece still carries a small trace of the outdoors: a blade of grass, a seed, or something else that recalls a life outside.",
+                "How the fleece develops from there, I gladly leave to you. You can brush it further at home to the look you like. Prefer a classic sheepskin shape? I'm happy to trim the hide to order."
+            ],
+            "nl": [
+                "Elke huid is uniek. Niet alleen in kleur, vorm of vacht, maar ook in het verhaal dat zij met zich meedraagt. Dat verhaal zie je terug in de kleine sporen die het leven heeft achtergelaten. Met de hand gelooid, met tijd, aandacht en wat de natuur ons biedt — een huid om op te leven, mee te werken of eenvoudig te bewonderen.",
+                "Heb je interesse in een van mijn handgelooide huiden? Stuur me gerust een bericht. Samen kijken we naar de huiden die op dat moment beschikbaar zijn; het aanbod verandert voortdurend.",
+                "Ik kies ervoor de vacht niet meer te borstelen dan nodig, zodat haar natuurlijke karakter behouden blijft. De huid laat ik zoveel mogelijk in haar natuurlijke vorm, zodat haar oorsprong zichtbaar blijft. Soms draagt de vacht nog een klein spoor van de natuur met zich mee: een grassprietje, een zaadje of iets anders dat herinnert aan een leven buiten.",
+                "Hoe de vacht zich daarna ontwikkelt, laat ik graag aan jou over. Je kunt haar thuis verder borstelen naar de uitstraling die je aanspreekt. Geef je de voorkeur aan een klassieke schapenvachtvorm? Dan snijd ik de huid op aanvraag graag voor je bij."
+            ],
+            "fr": [
+                "Chaque peau est unique — non seulement par sa couleur, sa forme ou sa toison, mais aussi par l'histoire qu'elle porte. Cette histoire se lit dans les petites traces que la vie a laissées. Tannée à la main, avec du temps, de l'attention et ce que la nature offre — une peau pour vivre, pour travailler ou simplement pour admirer.",
+                "Une de mes peaux tannées à la main vous intéresse ? Écrivez-moi et nous regarderons ensemble celles qui sont disponibles à ce moment-là ; l'offre change constamment.",
+                "Je choisis de brosser la toison pas plus que nécessaire, afin de préserver son caractère naturel. Je laisse aussi la peau autant que possible dans sa forme naturelle, pour que son origine reste visible. Parfois la toison porte encore une petite trace du dehors : un brin d'herbe, une graine ou autre chose qui rappelle une vie au grand air.",
+                "La façon dont la toison évolue ensuite, je vous la laisse volontiers. Vous pouvez la brosser chez vous jusqu'à l'aspect qui vous plaît. Vous préférez une forme classique de peau de mouton ? Je découpe la peau sur demande avec plaisir."
+            ]
         },
-        "image": "/assets/images/products/placeholder.svg",
-        "price": "\u20ac 85"
+        "images": [
+            "/assets/images/products/huid_1.jpg",
+            "/assets/images/products/huid_2.jpg",
+            "/assets/images/products/huid_3.jpg",
+            "/assets/images/products/huid_4.jpg"
+        ],
+        "price": {
+            "en": "Average price: € 150",
+            "nl": "Gemiddelde prijs: € 150",
+            "fr": "Prix moyen : € 150"
+        },
+        "price_note": {
+            "en": "The price varies with the size, wool quality, and character of the hide.",
+            "nl": "De prijs varieert afhankelijk van de grootte, wolkwaliteit en het karakter van de huid.",
+            "fr": "Le prix varie selon la taille, la qualité de la laine et le caractère de la peau."
+        }
     },
     {
-        "id": "sheepskin-cushion-cover",
+        "id": "sheepskin-seat-cushion",
         "name": {
-            "en": "Sheepskin Cushion Cover",
-            "nl": "Schapenvacht Kussenhoes",
-            "fr": "Housse de coussin en peau de mouton"
+            "en": "Sheepskin Seat Covers",
+            "nl": "Stoelhuiden",
+            "fr": "Assises en peau de mouton"
+        },
+        "tagline": {
+            "en": "A piece of nature that lives with you every day",
+            "nl": "Een stuk natuur dat dagelijks met je meeleeft",
+            "fr": "Un morceau de nature qui vous accompagne chaque jour"
         },
         "description": {
-            "en": "A cushion cover crafted from bark-tanned sheepskin, soft to the touch and warm in every season. Stitched with care. A small piece of ancient warmth for your home.",
-            "nl": "Een kussenhoes gemaakt van schorsgelooid schapenvacht, zacht om aan te raken en warm in elk seizoen. Met zorg gestikt. Een klein stukje oude warmte voor je huis.",
-            "fr": "Une housse de coussin en peau de mouton tann\u00e9e \u00e0 l\u2019\u00e9corce, douce au toucher et chaude en toute saison. Cousue avec soin. Un petit morceau de chaleur ancienne pour votre int\u00e9rieur."
+            "en": [
+                "For the kitchen table, behind your desk, or on your favourite chair. A sheepskin seat cover brings warmth, softness, and character to the places you return to every day.",
+                "Tanned by hand, with time, attention, and what nature provides. The wool shapes itself to your body and supports you through the long and the short moments of the day."
+            ],
+            "nl": [
+                "Voor aan de keukentafel, achter je bureau of op je favoriete stoel. Een stoelhuid brengt warmte, zachtheid en karakter op de plekken waar je iedere dag weer terugkomt.",
+                "Met de hand gelooid, met tijd, aandacht en wat de natuur ons biedt. De wol vormt zich naar je lichaam en ondersteunt je tijdens de lange én de korte momenten van de dag."
+            ],
+            "fr": [
+                "Pour la table de la cuisine, derrière votre bureau ou sur votre chaise préférée. Une assise en peau apporte chaleur, douceur et caractère aux endroits où vous revenez chaque jour.",
+                "Tannée à la main, avec du temps, de l'attention et ce que la nature offre. La laine épouse votre corps et vous soutient pendant les longs comme les courts moments de la journée."
+            ]
         },
-        "image": "/assets/images/products/placeholder.svg",
-        "price": "\u20ac 45"
+        "images": [
+            "/assets/images/products/zit_kussen_1.jpg",
+            "/assets/images/products/zit_kussen_3.jpg",
+            "/assets/images/products/zit_kussen_4.jpg",
+            "/assets/images/products/zit_kussen_2.jpg"
+        ],
+        "sizes_heading": {
+            "en": "Size",
+            "nl": "Maat",
+            "fr": "Taille"
+        },
+        "sizes": {
+            "en": ["Standard size — Ø 39 cm"],
+            "nl": ["Standaardmaat — Ø 39 cm"],
+            "fr": ["Taille standard — Ø 39 cm"]
+        },
+        "sizes_note": {
+            "en": "Looking for a different size? Every chair is different. Need another diameter or shape? Get in touch and we'll look at the options together.",
+            "nl": "Op zoek naar een andere maat? Iedere stoel is anders. Heb je een andere diameter of vorm nodig? Neem gerust contact met me op, dan kijken we samen naar de mogelijkheden.",
+            "fr": "Vous cherchez une autre taille ? Chaque chaise est différente. Besoin d'un autre diamètre ou d'une autre forme ? Contactez-moi et nous verrons ensemble les possibilités."
+        },
+        "price": {
+            "en": "€ 50 each",
+            "nl": "€ 50 per stuk",
+            "fr": "€ 50 pièce"
+        }
     },
     {
-        "id": "sheepskin-pouch",
+        "id": "sheepskin-slippers",
         "name": {
-            "en": "Sheepskin Pouch",
-            "nl": "Schapenvacht Zakje",
-            "fr": "Pochette en peau de mouton"
+            "en": "Baby Slippers",
+            "nl": "Babyslofjes",
+            "fr": "Chaussons bébé"
+        },
+        "tagline": {
+            "en": "Warmth, passed down for generations",
+            "nl": "Warmte, zoals we die al generaties lang doorgeven",
+            "fr": "La chaleur, transmise depuis des générations"
         },
         "description": {
-            "en": "A soft pouch made from bark-tanned sheepskin. For carrying small treasures, herbs, or everyday essentials. Each one is unique, shaped by the hide it came from.",
-            "nl": "Een zacht zakje gemaakt van schorsgelooid schapenvacht. Voor het bewaren van kleine schatten, kruiden of dagelijkse benodigdheden. Elk exemplaar is uniek, gevormd door de huid waarvan het gemaakt is.",
-            "fr": "Une pochette souple en peau de mouton tann\u00e9e \u00e0 l\u2019\u00e9corce. Pour transporter de petits tr\u00e9sors, des herbes ou des essentiels du quotidien. Chacune est unique, fa\u00e7onn\u00e9e par la peau dont elle provient."
+            "en": [
+                "For the very smallest, hand-sewn from naturally tanned sheepskin. Soft, breathable, and supple, so little feet can move freely and stay warm.",
+                "A pair of slippers that gently stir something we remember."
+            ],
+            "nl": [
+                "Voor de allerkleinsten, met de hand genaaid van natuurlijk gelooide schapenvacht. Zacht, ademend en soepel, zodat kleine voetjes vrij kunnen bewegen en warm blijven.",
+                "Een paar slofjes die iets in ons zachtjes doen herinneren."
+            ],
+            "fr": [
+                "Pour les tout-petits, cousus main dans une peau de mouton tannée naturellement. Doux, respirants et souples, pour que les petits pieds bougent librement et restent au chaud.",
+                "Une paire de chaussons qui réveille doucement quelque chose en nous."
+            ]
         },
-        "image": "/assets/images/products/placeholder.svg",
-        "price": "\u20ac 30"
+        "images": [
+            "/assets/images/products/slofjes_1.jpg",
+            "/assets/images/products/slofjes_2.jpg",
+            "/assets/images/products/slofjes_3.jpg",
+            "/assets/images/products/slofjes_4.jpg",
+            "/assets/images/products/slofjes_5.jpg"
+        ],
+        "sizes_heading": {
+            "en": "Sizes",
+            "nl": "Maten",
+            "fr": "Tailles"
+        },
+        "sizes": {
+            "en": ["2–6 months", "6–12 months", "12–18 months", "18–24 months", "2–3 years", "3–4 years"],
+            "nl": ["2–6 maanden", "6–12 maanden", "12–18 maanden", "18–24 maanden", "2–3 jaar", "3–4 jaar"],
+            "fr": ["2–6 mois", "6–12 mois", "12–18 mois", "18–24 mois", "2–3 ans", "3–4 ans"]
+        },
+        "sizes_note": {
+            "en": "The slippers run slightly small because of the soft wool inside. Unsure between two sizes? Get in touch and I'll gladly help you choose.",
+            "nl": "De slofjes vallen iets kleiner uit door de zachte wol aan de binnenkant. Twijfel je tussen twee maten? Neem gerust contact met me op, dan denk ik graag met je mee.",
+            "fr": "Les chaussons taillent un peu petit à cause de la laine douce à l'intérieur. Vous hésitez entre deux tailles ? Contactez-moi, je vous aiderai avec plaisir."
+        },
+        "price": {
+            "en": "€ 50 per pair",
+            "nl": "€ 50 per paar",
+            "fr": "€ 50 la paire"
+        }
     }
 ]

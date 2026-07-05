@@ -14,6 +14,7 @@ import os
 import re
 import shutil
 import sys
+from urllib.parse import quote
 
 try:
     import markdown
@@ -88,6 +89,50 @@ def render_markdown(filepath):
     return markdown.markdown(text, extensions=["extra", "codehilite"])
 
 
+def render_carousel(images, alt):
+    """Build a self-contained image carousel widget from a list of image paths.
+
+    A single image renders without arrows/dots.  The markup is progressively
+    enhanced by the carousel script in main.js — without JS it degrades to a
+    horizontally scrollable strip.
+    """
+    if not images:
+        images = ["/assets/images/products/placeholder.svg"]
+
+    slides = ""
+    for i, img in enumerate(images):
+        loading = "eager" if i == 0 else "lazy"
+        slides += (
+            '<li class="carousel-slide">'
+            f'<img src="{BASE_URL}{img}" alt="{alt}" loading="{loading}">'
+            "</li>"
+        )
+
+    single = len(images) <= 1
+    cls = "carousel carousel--single" if single else "carousel"
+    html = f'<div class="{cls}" data-carousel>'
+    html += f'<div class="carousel-viewport"><ul class="carousel-track">{slides}</ul></div>'
+
+    if not single:
+        html += (
+            '<button class="carousel-arrow carousel-arrow--prev" type="button" '
+            'aria-label="Previous image"><span aria-hidden="true">‹</span></button>'
+            '<button class="carousel-arrow carousel-arrow--next" type="button" '
+            'aria-label="Next image"><span aria-hidden="true">›</span></button>'
+        )
+        dots = ""
+        for i in range(len(images)):
+            active = " is-active" if i == 0 else ""
+            dots += (
+                f'<button class="carousel-dot{active}" type="button" '
+                f'aria-label="Go to image {i + 1}"></button>'
+            )
+        html += f'<div class="carousel-dots">{dots}</div>'
+
+    html += "</div>"
+    return html
+
+
 def write_page(rel_path, html):
     """Write *html* to dist/<rel_path>, creating directories as needed."""
     out = os.path.join(DIST, rel_path)
@@ -111,6 +156,7 @@ def copy_assets():
 
 SLUG_MAP = {
     "products": {"en": "products", "nl": "producten", "fr": "produits"},
+    "info":     {"en": "info",     "nl": "info",      "fr": "infos"},
     "blog":     {"en": "blog",     "nl": "blog",      "fr": "blog"},
 }
 
@@ -149,11 +195,12 @@ def build_context(lang, data, page="home", extra=None):
     # Navigation URLs
     ctx["url_home"] = page_url("home", lang)
     ctx["url_products"] = page_url("products", lang)
+    ctx["url_info"] = page_url("info", lang)
     ctx["url_blog"] = page_url("blog", lang)
 
     # Language switcher URLs (point to equivalent page in other languages)
     for l in LANGUAGES:
-        if page in ("home", "products", "blog"):
+        if page in ("home", "products", "info", "blog"):
             ctx[f"url_lang_{l}"] = page_url(page, l)
         else:
             # For blog posts, extra should contain the post slug
@@ -163,9 +210,14 @@ def build_context(lang, data, page="home", extra=None):
             else:
                 ctx[f"url_lang_{l}"] = page_url("home", l)
 
+    # Active language marker (for the language switcher)
+    for l in LANGUAGES:
+        ctx[f"active_lang_{l}"] = "active" if l == lang else ""
+
     # Active page marker
     ctx["active_home"] = "active" if page == "home" else ""
     ctx["active_products"] = "active" if page == "products" else ""
+    ctx["active_info"] = "active" if page == "info" else ""
     ctx["active_blog"] = "active" if page in ("blog", "blog-post") else ""
 
     # All translation strings
@@ -212,32 +264,121 @@ def build_root_redirect():
 def build_home(lang, data):
     tpl = load_template("home.html")
     ctx = build_context(lang, data, "home")
+
+    # Product showcase: each product as a carousel + name/price linking to shop
+    item_tpl = load_template("partials/showcase-item.html")
+    url_products = page_url("products", lang)
+    items_html = ""
+    for product in data["products"]:
+        name = _localize(product["name"], lang)
+        images = product.get("images") or [product.get("image", "/assets/images/products/placeholder.svg")]
+        item_ctx = {
+            "product_carousel": render_carousel(images, name),
+            "product_name": name,
+            "product_price": _localize(product.get("price", {}), lang),
+            "url_products": url_products,
+            "t_showcase_view": ctx.get("t_showcase_view", "View"),
+        }
+        items_html += render(item_tpl, item_ctx)
+    ctx["product_showcase"] = items_html
+
     body = render(tpl, ctx)
     html = assemble_page(body, lang, data, "home")
     write_page(f"{lang}/index.html", html)
 
 
+def _localize(field, lang):
+    """Return the value of a per-language field, falling back to DEFAULT_LANG."""
+    return field.get(lang, field.get(DEFAULT_LANG, ""))
+
+
+def render_product_sizes(product, lang):
+    """Build the optional sizes block (heading + size chips + note) for a product."""
+    heading = _localize(product.get("sizes_heading", {}), lang)
+    sizes = _localize(product.get("sizes", {}), lang)
+    note = _localize(product.get("sizes_note", {}), lang)
+
+    if not sizes and not note:
+        return ""
+
+    html = '<div class="product-sizes">'
+    if heading:
+        html += f'<h3 class="product-sizes-heading">{heading}</h3>'
+    if sizes:
+        items = "".join(f"<li>{s}</li>" for s in sizes)
+        html += f'<ul class="product-sizes-list">{items}</ul>'
+    if note:
+        html += f'<p class="product-sizes-note">{note}</p>'
+    html += "</div>"
+    return html
+
+
+def render_product_price(product, lang):
+    """Build the price line plus optional price note for a product."""
+    price = _localize(product.get("price", {}), lang)
+    note = _localize(product.get("price_note", {}), lang)
+
+    html = ""
+    if price:
+        html += f'<p class="product-price">{price}</p>'
+    if note:
+        html += f'<p class="product-price-note">{note}</p>'
+    return html
+
+
 def build_products(lang, data):
     products = data["products"]
-    card_tpl = load_template("product-card.html")
+    feat_tpl = load_template("product-feature.html")
 
-    cards_html = ""
+    site = data["site"]
+    contact_email = site["contact_email"]
+    contact_label = data["translations"].get(lang, {}).get("contact_label", "Contact")
+
+    features_html = ""
     for product in products:
+        name = _localize(product["name"], lang)
+        images = product.get("images") or [product.get("image", "/assets/images/products/placeholder.svg")]
+
+        desc = _localize(product["description"], lang)
+        if isinstance(desc, list):
+            desc_html = "".join(f"<p>{p}</p>" for p in desc)
+        else:
+            desc_html = f"<p>{desc}</p>"
+
+        subject = quote(f"{name} — {site['name']}")
         p_ctx = {
-            "product_name": product["name"].get(lang, product["name"][DEFAULT_LANG]),
-            "product_description": product["description"].get(lang, product["description"][DEFAULT_LANG]),
-            "product_image": BASE_URL + product.get("image", "/assets/images/products/placeholder.svg"),
-            "product_price": product.get("price", ""),
+            "product_name": name,
+            "product_tagline": _localize(product.get("tagline", {}), lang),
+            "product_description": desc_html,
+            "product_sizes": render_product_sizes(product, lang),
+            "product_carousel": render_carousel(images, name),
+            "product_price_block": render_product_price(product, lang),
+            "product_contact_url": f"mailto:{contact_email}?subject={subject}",
+            "t_contact_label": contact_label,
         }
-        cards_html += render(card_tpl, p_ctx)
+        features_html += render(feat_tpl, p_ctx)
 
     tpl = load_template("products.html")
     ctx = build_context(lang, data, "products")
-    ctx["product_cards"] = cards_html
+    ctx["product_features"] = features_html
     body = render(tpl, ctx)
     html = assemble_page(body, lang, data, "products")
 
     slug = SLUG_MAP["products"][lang]
+    write_page(f"{lang}/{slug}/index.html", html)
+
+
+def build_info(lang, data):
+    md_file = os.path.join(CONTENT_DIR, f"info.{lang}.md")
+    if not os.path.exists(md_file):
+        md_file = os.path.join(CONTENT_DIR, f"info.{DEFAULT_LANG}.md")
+
+    ctx = build_context(lang, data, "info")
+    ctx["info_body"] = render_markdown(md_file)
+    body = render(load_template("info.html"), ctx)
+    html = assemble_page(body, lang, data, "info")
+
+    slug = SLUG_MAP["info"][lang]
     write_page(f"{lang}/{slug}/index.html", html)
 
 
@@ -328,8 +469,6 @@ def main():
         print(f"\n[{lang}]")
         build_home(lang, data)
         build_products(lang, data)
-        build_blog_listing(lang, data)
-        build_blog_posts(lang, data)
 
     print("\nDone! Output in dist/")
 
