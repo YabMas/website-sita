@@ -753,20 +753,6 @@ a {
     color: var(--color-text-muted);
 }
 
-.footer-contact {
-    font-size: var(--fs-sm);
-    color: var(--color-tan-light);
-}
-
-.footer-contact a {
-    color: var(--color-ember);
-    transition: color var(--transition);
-}
-
-.footer-contact a:hover {
-    color: var(--color-cream);
-}
-
 /* ---------- Lightbox ---------- */
 .lightbox {
     display: none;
