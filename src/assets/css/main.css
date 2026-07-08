@@ -51,6 +51,13 @@ body {
     font-size: var(--fs-base);
     color: var(--color-text);
     background-color: var(--color-cream);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 h1, h2, h3, h4 {
@@ -733,6 +740,39 @@ a {
     border-top: 1px solid var(--color-tan-light);
 }
 
+/* ---------- Contact ---------- */
+.contact-info .section-heading {
+    margin-top: 0;
+}
+
+.contact-email-line {
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+.contact-portrait {
+    margin: var(--space-xl) auto 0;
+    max-width: 320px;
+}
+
+.contact-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+}
+
+.contact-email {
+    font-size: var(--fs-lg);
+    color: var(--color-ember);
+    transition: color 0.2s ease;
+}
+
+.contact-email:hover,
+.contact-email:focus {
+    color: var(--color-bark-mid);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
     background-color: var(--color-bark);
@@ -882,6 +922,14 @@ a {
 
     .nav-toggle {
         display: flex;
+        order: 3;
+        margin-left: var(--space-sm);
+    }
+
+    /* Group the language picker + toggle together on the right */
+    .lang-switcher {
+        order: 2;
+        margin-left: auto;
     }
 
     .site-nav {

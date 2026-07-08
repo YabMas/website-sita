@@ -1,39 +1,19 @@
-Je travaille avec l'un des plus anciens métiers que nous connaissons : le tannage naturel des peaux. Avec des matières issues de la nature elle-même — écorce d'arbre, fumée, cervelle et temps.
+## Origine
 
-Les peaux que je travaille proviennent de la chaîne alimentaire. Ce qui serait autrement perdu reçoit, par ce procédé, un nouveau chapitre.
-
-Je travaille lentement et avec attention. Chaque étape demande du temps, car je ne veux rien forcer que la nature elle-même ne presse pas.
-
-Dans mon travail, il ne s'agit pas seulement de la matière, mais de ce qu'elle évoque. Le souvenir de la proximité avec laquelle nous vivions autrefois avec la nature — et peut-être encore aujourd'hui.
-
-## Le métier
-
-Je travaille avec l'une des plus anciennes façons de conserver la peau : le tannage naturel des peaux de mouton et des peaux. Un processus lent, où le temps, l'attention et la matière font le travail ensemble.
-
-Je tanne avec ce que la nature offre elle-même : écorce d'arbre, fumée, parfois des œufs ou d'autres moyens végétaux et naturels. Aucune substance synthétique, aucun accélérateur. Seulement des procédés qui existent depuis des générations.
-
-Chaque peau demande sa propre approche. Aucune n'est identique, et c'est précisément là que réside pour moi la valeur de ce travail.
-
-## Travailler avec attention
-
-Ce n'est pas un processus pressé. Il faut du temps pour comprendre une peau, la traiter et la laisser devenir ce qu'elle peut être.
-
-Je travaille avec mes mains, mes sens et mon attention à la matière. Ce qui naît n'est pas un produit standardisé, mais une peau qui garde son propre caractère.
-
-## Pourquoi je fais cela
-
-Pour moi, ce travail ne concerne pas seulement la technique, mais la mémoire.
-
-Le souvenir d'une manière de vivre où la matière n'était pas séparée de la nature, mais en découlait directement. Où les choses étaient faites, utilisées et portées avec soin.
-
-Ce lien, j'essaie de le rendre perceptible dans mon travail — non comme quelque chose du passé, mais comme quelque chose qui existe encore dans la façon dont nous touchons, ressentons et vivons.
-
-## Mon atelier
-
-Je travaille depuis mon atelier, où la peau, le temps et la matière se rejoignent. Là, chaque pièce reçoit l'attention dont elle a besoin pour devenir ce qu'elle veut être.
+Les peaux que je travaille proviennent de la chaîne alimentaire. À une époque où la vitesse et la quantité sont souvent devenues plus importantes que l'attention et la qualité, ces peaux sont le plus souvent jetées. Cela me touche. Pour moi, elles ne sont pas un déchet, mais une matière naturelle précieuse. C'est pourquoi je choisis de prendre le temps nécessaire pour préserver leur valeur et remettre d'autres personnes en contact avec cette matière.
 
 ## Tanné naturellement
 
-Les peaux que je travaille proviennent de la chaîne alimentaire. Pour beaucoup d'entre elles, il n'y a plus de destination ; sans transformation, elles seraient jetées. En les tannant de façon naturelle, elles reçoivent une nouvelle vie — non par désir de créer quelque chose de nouveau, mais pour préserver ce qui existait déjà.
+Mes peaux sont tannées uniquement avec des matières naturelles, sans chrome ni autres produits chimiques de tannage synthétiques.
 
-Ces peaux sont entièrement tannées naturellement et ne contiennent ni chrome ni autres produits chimiques de tannage. Les personnes qui réagissent aux peaux tannées chimiquement trouvent parfois les peaux naturelles une alternative agréable. Avez-vous une allergie ou une sensibilité connue ? N'hésitez pas à me contacter pour discuter si ce produit vous convient. C'est avec plaisir que j'y réfléchis avec vous.
+Certaines personnes qui réagissent aux peaux tannées chimiquement trouvent les peaux tannées naturellement une alternative agréable. La façon dont une peau est ressentie reste finalement quelque chose de personnel.
+
+## Entretien
+
+Les peaux tannées naturellement supportent l'humidité et peuvent, si nécessaire, être lavées à la main ou sur un programme de lavage à la main délicat.
+
+Laissez ensuite la peau sécher tranquillement à l'air. Pendant le séchage, le cuir peut sembler un peu plus rigide. En la pliant, en la malaxant ou en la passant sur un bord arrondi, la peau retrouve d'elle-même sa souplesse.
+
+## Ma promesse
+
+Je crois en des produits qui durent et qui sont faits avec attention. C'est pourquoi je reste volontiers à votre disposition, même après l'achat. Vous avez une question sur votre peau, ou quelque chose ne vous satisfait pas ? N'hésitez pas à me contacter. Nous chercherons ensemble une solution adaptée.

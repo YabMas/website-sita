@@ -14,7 +14,6 @@ import os
 import re
 import shutil
 import sys
-from urllib.parse import quote
 
 try:
     import markdown
@@ -157,6 +156,7 @@ def copy_assets():
 SLUG_MAP = {
     "products": {"en": "products", "nl": "producten", "fr": "produits"},
     "info":     {"en": "info",     "nl": "info",      "fr": "infos"},
+    "contact":  {"en": "contact",  "nl": "contact",   "fr": "contact"},
     "blog":     {"en": "blog",     "nl": "blog",      "fr": "blog"},
 }
 
@@ -196,11 +196,12 @@ def build_context(lang, data, page="home", extra=None):
     ctx["url_home"] = page_url("home", lang)
     ctx["url_products"] = page_url("products", lang)
     ctx["url_info"] = page_url("info", lang)
+    ctx["url_contact"] = page_url("contact", lang)
     ctx["url_blog"] = page_url("blog", lang)
 
     # Language switcher URLs (point to equivalent page in other languages)
     for l in LANGUAGES:
-        if page in ("home", "products", "info", "blog"):
+        if page in ("home", "products", "info", "contact", "blog"):
             ctx[f"url_lang_{l}"] = page_url(page, l)
         else:
             # For blog posts, extra should contain the post slug
@@ -218,6 +219,7 @@ def build_context(lang, data, page="home", extra=None):
     ctx["active_home"] = "active" if page == "home" else ""
     ctx["active_products"] = "active" if page == "products" else ""
     ctx["active_info"] = "active" if page == "info" else ""
+    ctx["active_contact"] = "active" if page == "contact" else ""
     ctx["active_blog"] = "active" if page in ("blog", "blog-post") else ""
 
     # All translation strings
@@ -330,8 +332,6 @@ def build_products(lang, data):
     products = data["products"]
     feat_tpl = load_template("product-feature.html")
 
-    site = data["site"]
-    contact_email = site["contact_email"]
     contact_label = data["translations"].get(lang, {}).get("contact_label", "Contact")
 
     features_html = ""
@@ -345,7 +345,6 @@ def build_products(lang, data):
         else:
             desc_html = f"<p>{desc}</p>"
 
-        subject = quote(f"{name} — {site['name']}")
         p_ctx = {
             "product_name": name,
             "product_tagline": _localize(product.get("tagline", {}), lang),
@@ -353,7 +352,7 @@ def build_products(lang, data):
             "product_sizes": render_product_sizes(product, lang),
             "product_carousel": render_carousel(images, name),
             "product_price_block": render_product_price(product, lang),
-            "product_contact_url": f"mailto:{contact_email}?subject={subject}",
+            "product_contact_url": page_url("contact", lang),
             "t_contact_label": contact_label,
         }
         features_html += render(feat_tpl, p_ctx)
@@ -379,6 +378,15 @@ def build_info(lang, data):
     html = assemble_page(body, lang, data, "info")
 
     slug = SLUG_MAP["info"][lang]
+    write_page(f"{lang}/{slug}/index.html", html)
+
+
+def build_contact(lang, data):
+    ctx = build_context(lang, data, "contact")
+    body = render(load_template("contact.html"), ctx)
+    html = assemble_page(body, lang, data, "contact")
+
+    slug = SLUG_MAP["contact"][lang]
     write_page(f"{lang}/{slug}/index.html", html)
 
 
@@ -469,6 +477,8 @@ def main():
         print(f"\n[{lang}]")
         build_home(lang, data)
         build_products(lang, data)
+        build_info(lang, data)
+        build_contact(lang, data)
 
     print("\nDone! Output in dist/")
 
